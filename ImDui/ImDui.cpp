@@ -428,6 +428,7 @@ namespace ImDui
 						pSink->EndFigure(D2D1_FIGURE_END_CLOSED);
 					}
 					pSink->Close();
+					pSink->Release();
 				}
 
 				if (isFilled)
@@ -464,6 +465,7 @@ namespace ImDui
 						pSink->EndFigure(D2D1_FIGURE_END_OPEN);
 					}
 					pSink->Close();
+					pSink->Release();
 				}
 
 				pRenderTarget->DrawGeometry(pGeometry, _pCommonBrush, _penWidth);
